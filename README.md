@@ -43,7 +43,7 @@ Proyecto del programa **Blockchain Builders 101** de la Blockchain Acceleration 
 ### Yuen Fey Alvarez Porras
 **Full Stack Developer / Investigación y validación**
 
-<img src="FotosFounders/Yuen.jpg" alt="Yuen Fey" width="150" style="border-radius: 50%; margin: 10px;">
+<img src="FotosFounders/yuen.jpg" alt="Yuen Fey" width="150" style="border-radius: 50%; margin: 10px;">
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yuenfey)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/Yuenfey)
