@@ -1,5 +1,14 @@
-# ProyectoBase
-Plantilla base de BB101. Haz fork para arrancar el proyecto de tu equipo, incluye la estructura semana a semana de cada entregable.
+# NutriTrust
+
+Plataforma para garantizar la trazabilidad, autenticidad y verificabilidad de la información nutricional de los alimentos a lo largo de toda su cadena de generación y validación.
+
+Proyecto del programa **Blockchain Builders 101** de la Blockchain Acceleration Foundation.
+
+## 📚 Entregables
+
+| Semana | Entregable |
+|---|---|
+| 1 | [Propuestas individuales](docs/semana1/) y [Problem Brief](docs/semana1/ProblemBrief.md) |
 
 ---
 
