@@ -36,7 +36,7 @@ Proyecto del programa **Blockchain Builders 101** de la Blockchain Acceleration 
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=flat&logo=telegram&logoColor=white)](https://t.me/Julilugo09)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/Julilugo09)
 
-</div>
+
 
 ---
 
