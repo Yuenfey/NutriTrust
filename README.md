@@ -48,4 +48,15 @@ Proyecto del programa **Blockchain Builders 101** de la Blockchain Acceleration 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yuenfey)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/Yuenfey)
 
+
+---
+
+### Nicolas Alvarino Laguna
+**QA Automatizador**
+
+<img src="FotosFounders/NicolasAlvarino.jpg" alt="Nicolas Alvarino" width="150" style="border-radius: 50%; margin: 10px;">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nicolasalvarino/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/nicolasalvarino-l)
+
 </div>
