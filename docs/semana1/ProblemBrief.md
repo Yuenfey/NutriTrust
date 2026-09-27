@@ -59,10 +59,11 @@ Plataforma para garantizar la trazabilidad, autenticidad y verificabilidad de la
 | Yuen Fey Alvarez Porras | Yuenfey               | Investigación y validación          |
 | Integrante 3            | na                    | Diseño funcional                    |
 | Integrante 4            | na                    | Coordinación técnica                |
+| Carlos Bermudez Rios    | Cearjeyou             | Ingeniero                           |
 
 **Responsable de entregables:** Nicolás Alvarino Laguna
  
-**Canal de coordinación:** GitHub, Discord y reuniones virtuales del equipo.
+**Canal de coordinación:** GitHub, Discord, Whatsapp y reuniones virtuales del equipo.
 
 ### Problema y evidencia
 
