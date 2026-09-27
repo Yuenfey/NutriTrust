@@ -24,10 +24,12 @@ El problema cumple con los criterios analizados en la Sesión 1, especialmente l
 
 > Cada propuesta considerada, quién la propuso y el motivo del descarte.
 
-Propuesta | Proponente | Motivo del descarte |
+| Propuesta | Proponente | Motivo del descarte |
 |------------|------------|---------------------|
 | Sistema de custodia de pagos para trabajadores independientes y clientes mediante contratos inteligentes | Nicolás Alvarino Laguna | Aunque resuelve un problema real de confianza entre partes, el equipo consideró que existen múltiples soluciones centralizadas ampliamente adoptadas y que el problema nutricional ofrece un impacto social más amplio y una necesidad más evidente de trazabilidad histórica. |
-| Otras propuestas presentadas por el equipo | Integrantes del grupo | Fueron descartadas por tener menor alineación con los criterios de pertinencia blockchain definidos en la sesión inicial. |.
+| Registro compartido de gastos y reembolsos entre herederos durante una sucesión familiar (Legacy) | Santiago Mesa | Cumple los criterios de histórico inalterable y registro compartido, pero involucra a pocas partes (una familia) que en la mayoría de casos sí confían entre sí, y su alcance es más acotado que el del problema nutricional, que afecta a múltiples organizaciones independientes. |
+| Custodia del depósito de garantía en contratos de arrendamiento para evitar retenciones y deducciones arbitrarias | Juliana Lugo | Elimina un intermediario que concentra la confianza, pero la disputa de fondo (el estado del inmueble al entregarlo) sigue dependiendo de una evaluación subjetiva fuera de la cadena, y el flujo se parece al de custodia de pagos ya considerado. |
+| Verificación en tiempo real de la cartera que las fintechs asignan a sus fondeadores | Carlos Arturo Bermudez Rios | Presenta un caso sólido de partes que no confían entre sí, pero exige integrar sistemas financieros y datos sensibles de deudores, con una complejidad regulatoria alta para el alcance del programa. |
 
 ### Cómo tomamos la decisión
 
@@ -47,7 +49,7 @@ Después de comparar las alternativas, el equipo concluyó que el problema relac
 
 ### NutriTrust
  
-Plataforma para garantizar la trazabilidad, autenticidad y verificabilidad de la información nutricional de los alimentos a lo largo de toda su cadena de generación y validación..
+Plataforma para garantizar la trazabilidad, autenticidad y verificabilidad de la información nutricional de los alimentos a lo largo de toda su cadena de generación y validación.
 
 ### Equipo y roles
 
@@ -57,8 +59,8 @@ Plataforma para garantizar la trazabilidad, autenticidad y verificabilidad de la
 |-------------------------|-----------------------|-------------------------------------|
 | Nicolás Alvarino Laguna | nicolasalvarino-l     | Analista de negocio y documentación |
 | Yuen Fey Alvarez Porras | Yuenfey               | Investigación y validación          |
-| Integrante 3            | na                    | Diseño funcional                    |
-| Integrante 4            | na                    | Coordinación técnica                |
+| Santiago Mesa           | mesas01               | Smart Contract Developer            |
+| Juliana Lugo            | Julilugo09            | Full Stack Developer                |
 | Carlos Bermudez Rios    | Cearjeyou             | Ingeniero                           |
 
 **Responsable de entregables:** Nicolás Alvarino Laguna
@@ -77,6 +79,10 @@ La evidencia del problema puede observarse en diferencias entre bases de datos n
  
 La situación impacta especialmente en productos destinados a personas con restricciones alimentarias, enfermedades metabólicas o necesidades dietéticas específicas, donde la precisión de la información puede influir directamente en decisiones relacionadas con la salud.
 
+**Fuentes consultadas:**
+- La FAO, a través de la red INFOODS, publicó guías específicas para verificar y armonizar datos de composición de alimentos, reconociendo que la calidad de los datos sigue siendo un problema en las tablas y bases publicadas ([FAO/INFOODS – Guidelines for Checking Food Composition Data](https://www.fao.org/fileadmin/templates/food_composition/documents/upload/Guidelines_data_checking.pdf); [Charrondière et al., *Food Chemistry*](https://www.sciencedirect.com/science/article/abs/pii/S0308814614017841)).
+- En Colombia, la [Resolución 810 de 2021 del Ministerio de Salud](https://normograma.invima.gov.co/compilacion/docs/resolucion_minsaludps_0810_2021.htm) obliga a declarar la información nutricional de los alimentos envasados y busca prevenir prácticas que induzcan a engaño, lo que muestra que la veracidad de estos datos es una preocupación regulatoria.
+
 ### Usuario y actores
 
 > Quién sufre el problema y qué necesita resolver. Cómo lo resuelve hoy y qué le cuesta en dinero, tiempo o esfuerzo. Demás actores que intervienen en el flujo, con el papel que cumple cada uno. Extensión: 150–300 palabras.
@@ -94,7 +100,7 @@ Los actores involucrados son:
 5. Instituciones de salud e investigación, que utilizan los datos para estudios y recomendaciones.
 6. Consumidores finales, quienes consultan la información para tomar decisiones de compra.
  
-El costo actual se refleja en procesos de auditoría más complejos, tiempo adicional dedicado a verificaciones manuales y pérdida de confianza cuando existen discrepancias entre distintas fuentes de información..
+El costo actual se refleja en procesos de auditoría más complejos, tiempo adicional dedicado a verificaciones manuales y pérdida de confianza cuando existen discrepancias entre distintas fuentes de información.
 
 ### Flujo actual de valor
 
@@ -115,21 +121,21 @@ Los intermediarios principales son los laboratorios, organismos reguladores y pl
  
 Los procesos de análisis, certificación y etiquetado responden normalmente a obligaciones regulatorias relacionadas con seguridad alimentaria, transparencia de información al consumidor y cumplimiento de estándares nacionales e internacionales.
  
-La información fluye entre múltiples sistemas independientes, generando dificultades para auditar la procedencia exacta de cada dato y verificar cuándo, por quién y bajo qué condiciones fue modificada..
+La información fluye entre múltiples sistemas independientes, generando dificultades para auditar la procedencia exacta de cada dato y verificar cuándo, por quién y bajo qué condiciones fue modificada.
 
 ### Fricciones identificadas
 
 > Puntos concretos donde el flujo falla, se encarece o se demora. Cada fricción indica en qué paso ocurre, qué la causa y a quién afecta. Extensión: 150–300 palabras.
 
-La primera fricción ocurre durante el intercambio de información entre fabricantes y laboratorios. Los resultados pueden almacenarse en diferentes sistemas, lo que dificulta mantener una única versión verificable de los datos.
+La primera fricción ocurre en los pasos 2 a 4, durante el intercambio de información entre fabricantes y laboratorios. Los resultados pueden almacenarse en diferentes sistemas, lo que dificulta mantener una única versión verificable de los datos.
  
-La segunda fricción aparece cuando organismos reguladores y entidades externas intentan auditar información histórica. Reconstruir el historial completo de modificaciones suele requerir consultar múltiples bases de datos y documentos.
+La segunda fricción aparece en el paso 5, cuando organismos reguladores y entidades externas intentan auditar información histórica. Reconstruir el historial completo de modificaciones suele requerir consultar múltiples bases de datos y documentos.
  
-La tercera fricción afecta a investigadores y profesionales de la salud. La existencia de múltiples fuentes puede generar discrepancias que demandan verificaciones adicionales y retrasan procesos de investigación o toma de decisiones clínicas.
+La tercera fricción ocurre en los pasos 7 y 8 y afecta a investigadores y profesionales de la salud. La existencia de múltiples fuentes puede generar discrepancias que demandan verificaciones adicionales y retrasan procesos de investigación o toma de decisiones clínicas.
  
-La cuarta fricción impacta directamente en consumidores. Cuando encuentran diferencias entre etiquetas, aplicaciones o bases de datos públicas, resulta difícil identificar cuál fuente contiene la información correcta.
+La cuarta fricción ocurre en el paso 8 e impacta directamente en consumidores. Cuando encuentran diferencias entre etiquetas, aplicaciones o bases de datos públicas, resulta difícil identificar cuál fuente contiene la información correcta.
  
-Finalmente, los procesos de auditoría y validación generan costos operativos significativos para empresas e instituciones debido a la necesidad de conservar registros separados y coordinar revisiones periódicas entre múltiples organizaciones..
+Finalmente, en los pasos 3 y 5, los procesos de auditoría y validación generan costos operativos significativos para empresas e instituciones debido a la necesidad de conservar registros separados y coordinar revisiones periódicas entre múltiples organizaciones.
 
 ### Oportunidad e hipótesis
 
@@ -141,7 +147,7 @@ Esta oportunidad fue seleccionada porque representa el origen de varias de las f
  
 La hipótesis inicial es que una solución basada en blockchain permitiría registrar cada análisis nutricional, actualización o certificación en un historial compartido e inalterable accesible para todos los participantes autorizados.
  
-Para el usuario final esto significaría poder verificar el origen de la información nutricional, conocer cuándo fue actualizada y validar quién realizó cada modificación. Como consecuencia, aumentaría la transparencia y la confianza en los datos utilizados para tomar decisiones relacionadas con salud y alimentación.
+Para el usuario final esto significaría poder verificar el origen de la información nutricional, conocer cuándo fue actualizada y validar quién realizó cada modificación. Como consecuencia, aumentaría la transparencia y la confianza en los datos utilizados para tomar decisiones relacionadas con salud y alimentación. Un nutricionista, por ejemplo, podría confirmar en segundos qué laboratorio certificó el dato que usa para diseñar una dieta.
 
 ### Criterio de pertinencia
 
@@ -169,4 +175,4 @@ El tercer supuesto es que los beneficios obtenidos en auditoría, transparencia 
  
 Entre los principales riesgos se encuentran la resistencia organizacional al cambio, posibles restricciones regulatorias relacionadas con la gestión de información alimentaria y la dificultad de establecer estándares comunes para el intercambio de datos entre instituciones.
  
-Asimismo, si los procedimientos de validación previos al registro no son adecuados, podrían preservarse permanentemente datos incorrectos, reduciendo el valor de la solución propuesta..
+Asimismo, si los procedimientos de validación previos al registro no son adecuados, podrían preservarse permanentemente datos incorrectos, reduciendo el valor de la solución propuesta.
