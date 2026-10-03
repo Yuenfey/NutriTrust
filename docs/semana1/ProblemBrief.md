@@ -14,11 +14,13 @@ La información sobre la composición nutricional de los alimentos carece de est
 
 > Qué inclinó al equipo por este problema frente a los demás, según los criterios de la Sesión 1.
 
-El equipo eligió este problema porque presenta una necesidad clara de mantener información confiable entre múltiples actores que participan en la generación, validación y consumo de datos nutricionales. Instituciones de salud, laboratorios, productores de alimentos, organismos reguladores y consumidores necesitan acceder a información consistente y verificable, pero actualmente cada actor administra sus propios registros.
+El equipo eligió este problema por su inmenso potencial de escalabilidad y su impacto directo en la salud pública, los servicios de alimentación y el futuro de la nutrición de precisión (nutrigenómica). A diferencia de las propuestas descartadas, este reto requiere una infraestructura que conecte ecosistemas enteros y elimine los cuellos de botella de la información científica a gran escala.
 
-Además, los datos nutricionales tienen impacto directo en decisiones relacionadas con la salud pública, la investigación científica y la formulación de dietas especializadas. Por esta razón, resulta fundamental garantizar la integridad del historial de modificaciones y la trazabilidad de la información.
- 
-El problema cumple con los criterios analizados en la Sesión 1, especialmente la necesidad de compartir un registro común entre organizaciones que no confían plenamente entre sí y la importancia de conservar un historial inalterable de los datos registrados.
+Este problema cumple estrictamente con los criterios de la Sesión 1:
+
+Registro compartido sin un dueño único: La industria, los investigadores y los gobiernos tienen intereses distintos. Al igual que en los sistemas de custodia (escrow), un registro distribuido permite que la validación de un alimento requiera el acuerdo de múltiples expertos (quórum), evitando que los datos nutricionales sean manipulados por silos institucionales o intereses comerciales privados.
+
+Histórico inalterable para auditorías confiables: Para automatizar cálculos críticos, o cruzar el perfil de un alimento con bases de datos metabólicas y genéticas, los profesionales necesitan verificar el linaje de la evidencia. Un registro inmutable garantiza que la procedencia del dato quede guardada permanentemente, previniendo el fraude científico e impidiendo que el emisor original borre u oculte el pasado.
 
 ### Propuestas descartadas
 
@@ -49,7 +51,7 @@ Después de comparar las alternativas, el equipo concluyó que el problema relac
 
 ### NutriTrust
  
-Plataforma para garantizar la trazabilidad, autenticidad y verificabilidad de la información nutricional de los alimentos a lo largo de toda su cadena de generación y validación.
+Infraestructura descentralizada para garantizar la trazabilidad, homologación y verificabilidad de los datos de composición de alimentos.
 
 ### Equipo y roles
 
@@ -71,13 +73,15 @@ Plataforma para garantizar la trazabilidad, autenticidad y verificabilidad de la
 
 > Enunciado del problema en una frase, sin mencionar blockchain. Contexto, frecuencia y alcance. Evidencia mínima de que el problema existe: observación directa, experiencia propia, conversaciones o fuentes consultadas, con enlace o cita cuando aplique. Extensión: 150–300 palabras.
 
-La información nutricional de los alimentos suele encontrarse distribuida entre múltiples fuentes con distintos niveles de calidad, actualización y validación. Como consecuencia, consumidores, profesionales de la salud, investigadores e instituciones enfrentan dificultades para comprobar si los datos publicados corresponden realmente al producto analizado y si han sido modificados posteriormente.
- 
-Actualmente, la información nutricional pasa por varios actores: fabricantes, laboratorios de análisis, organismos reguladores, distribuidores y sistemas de información nutricional. En muchos casos cada participante almacena los resultados en bases de datos independientes cuya relación es difícil de verificar. Esto genera duplicidad de registros, inconsistencias entre fuentes y problemas para identificar el origen de determinada información.
- 
-La evidencia del problema puede observarse en diferencias entre bases de datos nutricionales nacionales e internacionales, cambios en formulaciones de productos sin un mecanismo sencillo para rastrear versiones anteriores y dificultades que enfrentan investigadores para validar la procedencia de datos históricos utilizados en estudios científicos.
- 
-La situación impacta especialmente en productos destinados a personas con restricciones alimentarias, enfermedades metabólicas o necesidades dietéticas específicas, donde la precisión de la información puede influir directamente en decisiones relacionadas con la salud.
+La información sobre la composición nutricional de los alimentos carece de estructura unificada, y resulta muy difícil verificar, homologar o rastrear su historial de procedencia.
+
+Contexto y alcance: Si bien la información nutricional existe y cada gobierno la consolida bajo sus propios criterios, estos estándares son locales, aislados y estructuralmente inestables. Esta fragmentación genera una pérdida constante de información histórica. En la práctica clínica, la falta de una base continua convierte cualquier cálculo a escala en un proceso manual que consume enormes cantidades de tiempo. Esto obstaculiza casos de uso críticos inmediatos (como planes de compra en emergencias humanitarias) y frena el avance científico a largo plazo: es imposible cruzar modelos algorítmicos predictivos o genéticos con bases de datos de bioactivos (el Foodome) si la información de origen del alimento no es estandarizada y confiable.
+
+Evidencia:
+
+Observación directa (Inestabilidad institucional): La pérdida de datos es evidente al comparar documentos oficiales. Por ejemplo, la Tabla de Composición de Alimentos Colombianos (TCAC) de 2015 contaba con 967 alimentos, mientras que la versión de 2018 se redujo a 773. Cientos de alimentos locales y variaciones de formato quedaron excluidos sin un repositorio histórico auditable.
+
+Fuentes consultadas: La FAO, a través de la red INFOODS, reconoce formalmente en sus guías (Guidelines for Checking Food Composition Data) que la calidad, consistencia y los vacíos metodológicos en las tablas nacionales publicadas siguen siendo un problema crítico para la interoperabilidad científica y la prescripción.
 
 **Fuentes consultadas:**
 - La FAO, a través de la red INFOODS, publicó guías específicas para verificar y armonizar datos de composición de alimentos, reconociendo que la calidad de los datos sigue siendo un problema en las tablas y bases publicadas ([FAO/INFOODS – Guidelines for Checking Food Composition Data](https://www.fao.org/fileadmin/templates/food_composition/documents/upload/Guidelines_data_checking.pdf); [Charrondière et al., *Food Chemistry*](https://www.sciencedirect.com/science/article/abs/pii/S0308814614017841)).
@@ -87,92 +91,87 @@ La situación impacta especialmente en productos destinados a personas con restr
 
 > Quién sufre el problema y qué necesita resolver. Cómo lo resuelve hoy y qué le cuesta en dinero, tiempo o esfuerzo. Demás actores que intervienen en el flujo, con el papel que cumple cada uno. Extensión: 150–300 palabras.
 
-Los principales usuarios afectados son nutricionistas, consumidores, investigadores, instituciones de salud y organismos reguladores que necesitan acceder a información nutricional confiable y verificable.
- 
-Actualmente estos usuarios obtienen la información mediante etiquetas de productos, bases de datos públicas, publicaciones científicas o información suministrada por fabricantes. Sin embargo, cuando surge alguna discrepancia o necesitan verificar la procedencia de los datos, deben realizar procesos manuales de validación que consumen tiempo y recursos.
- 
-Los actores involucrados son:
- 
-1. Productores de alimentos, que generan los productos y reportan información nutricional.
-2. Laboratorios de análisis, responsables de medir y certificar la composición nutricional.
-3. Organismos reguladores, encargados de supervisar el cumplimiento normativo.
-4. Distribuidores y minoristas, que comercializan los productos.
-5. Instituciones de salud e investigación, que utilizan los datos para estudios y recomendaciones.
-6. Consumidores finales, quienes consultan la información para tomar decisiones de compra.
- 
-El costo actual se refleja en procesos de auditoría más complejos, tiempo adicional dedicado a verificaciones manuales y pérdida de confianza cuando existen discrepancias entre distintas fuentes de información.
+Los Usuarios principales (quienes sufren el problema directamente) son los profesionales de nutrición, investigadores clínicos, planificadores de servicios de alimentación a colectividades y organizaciones de ayuda humanitaria. Ellos necesitan acceder a datos exactos, auditables y estandarizados para calcular requerimientos poblacionales, diseñar minutas a gran escala o validar mecanismos metabólicos predictivos en investigación.
+
+Cómo lo resuelven hoy y qué les cuesta:
+Actualmente resuelven esta necesidad de forma operativa y fragmentada. Extraen información de PDFs estáticos o desactualizados, transcriben datos manualmente a hojas de cálculo, los cruzan con bases extranjeras y ante discrepancias o falta de alimentos locales, asumen valores teóricos. Esto les cuesta horas de desgaste. Además, implica un altísimo costo en riesgo social, científico y financiero: un cálculo derivado de un dato obsoleto puede subestimar las necesidades de poblaciones vulnerables, encarecer drásticamente planes de compra en emergencias institucionales, o invalidar estudios clínicos al basarse en evidencia fragmentada.
+
+Los Actores (quienes intervienen en el flujo, pero no asumen esta fricción operativa diaria) son:
+
+Fuentes oficiales e institucionales (ej. ICBF, Ministerios): Custodios actuales de la información que financian y publican esporádicamente las tablas de referencia.
+
+Laboratorios bromatológicos: Entidades que ejecutan los análisis químicos rigurosos (ej. métodos AOAC) y generan los datos científicos crudos.
+
+Comunidad profesional (Quórum de validación): Colegios de nutricionistas y académicos que poseen el criterio técnico para resolver equivalencias culturales y auditar discrepancias.
+
+Sector comercial e Industria: Actores que en el futuro consumirán esta infraestructura para certificar el perfil nutricional verificable de sus productos como valor agregado.
 
 ### Flujo actual de valor
 
 > Recorrido paso a paso de cómo se mueve hoy el dinero, la información o el activo, desde el origen hasta el destino. Diagrama o secuencia numerada, con los intermediarios explícitos. Señalar si algún paso responde a una obligación normativa. Extensión: 150–300 palabras.
 
-El flujo actual de información sigue generalmente los siguientes pasos:
- 
-1. Un productor desarrolla o modifica un producto alimenticio.
-2. Se envían muestras a un laboratorio para analizar la composición nutricional.
-3. El laboratorio genera un informe con los resultados obtenidos.
-4. El fabricante incorpora la información en etiquetas y sistemas internos.
-5. Los organismos reguladores verifican el cumplimiento de la normativa alimentaria vigente.
-6. Distribuidores y minoristas comercializan el producto.
-7. Los datos nutricionales son publicados en diversos portales, bases de datos o aplicaciones.
-8. Consumidores, nutricionistas e investigadores consultan la información disponible.
- 
-Los intermediarios principales son los laboratorios, organismos reguladores y plataformas de publicación de datos.
- 
-Los procesos de análisis, certificación y etiquetado responden normalmente a obligaciones regulatorias relacionadas con seguridad alimentaria, transparencia de información al consumidor y cumplimiento de estándares nacionales e internacionales.
- 
-La información fluye entre múltiples sistemas independientes, generando dificultades para auditar la procedencia exacta de cada dato y verificar cuándo, por quién y bajo qué condiciones fue modificada.
+El activo que fluye en este ecosistema es la información científica (el dato bromatológico). El recorrido actual de este activo es el siguiente:
+
+Análisis de origen: Una entidad oficial o laboratorio realiza un análisis bromatológico bajo financiamiento público o independiente.
+
+Publicación centralizada (Obligación Normativa): Los resultados pasan a un intermediario gubernamental (ej. Ministerios, ICBF) que, cumpliendo con la obligación normativa de mantener guías de salud pública, los compila en documentos estáticos (informes técnicos, PDFs o tablas impresas como la TCAC).
+
+Estancamiento institucional: La tabla de referencia queda congelada en esa versión durante años. El dato publicado se asume como "dogma oficial" por diseño, sin importar si surgen métodos analíticos más precisos en el intermedio.
+
+Transcripción y consumo: Los Usuarios (profesionales de salud e investigadores) extraen manualmente esta información, transcribiéndola a hojas de cálculo propias (Excel) o software aislado para poder realizar cálculos dietarios o clínicos.
+
+Silenciamiento de la controversia: Cuando surge una discrepancia científica (ej. un contraanálisis de una universidad independiente o un cambio en la nomenclatura local), no existe un canal unificado ni un consenso para actualizar el registro, obligando al usuario a elegir un valor de forma empírica y rompiendo la trazabilidad de la evidencia.
 
 ### Fricciones identificadas
 
 > Puntos concretos donde el flujo falla, se encarece o se demora. Cada fricción indica en qué paso ocurre, qué la causa y a quién afecta. Extensión: 150–300 palabras.
 
-La primera fricción ocurre en los pasos 2 a 4, durante el intercambio de información entre fabricantes y laboratorios. Los resultados pueden almacenarse en diferentes sistemas, lo que dificulta mantener una única versión verificable de los datos.
- 
-La segunda fricción aparece en el paso 5, cuando organismos reguladores y entidades externas intentan auditar información histórica. Reconstruir el historial completo de modificaciones suele requerir consultar múltiples bases de datos y documentos.
- 
-La tercera fricción ocurre en los pasos 7 y 8 y afecta a investigadores y profesionales de la salud. La existencia de múltiples fuentes puede generar discrepancias que demandan verificaciones adicionales y retrasan procesos de investigación o toma de decisiones clínicas.
- 
-La cuarta fricción ocurre en el paso 8 e impacta directamente en consumidores. Cuando encuentran diferencias entre etiquetas, aplicaciones o bases de datos públicas, resulta difícil identificar cuál fuente contiene la información correcta.
- 
-Finalmente, en los pasos 3 y 5, los procesos de auditoría y validación generan costos operativos significativos para empresas e instituciones debido a la necesidad de conservar registros separados y coordinar revisiones periódicas entre múltiples organizaciones.
+Fricción de procedencia (Pasos 1 y 2): Ocurre en la transición del análisis de laboratorio a la publicación gubernamental centralizada. Causa: El uso de formatos cerrados e institucionales (PDFs o impresos) omite la metodología analítica cruda (ej. métodos AOAC). Afecta a: Investigadores clínicos y nutricionistas, quienes no pueden auditar con qué rigor científico se obtuvo el valor reportado.
+
+Fricción de centralización y obsolescencia (Paso 3): Ocurre durante el estancamiento institucional del dato. Causa: Una sola entidad estatal concentra el poder, el presupuesto y la confianza para actualizar la tabla de referencia, provocando desfases de más de una década. Afecta a: Planificadores de salud pública y profesionales, obligados a realizar cálculos con perfiles bromatológicos que ya no reflejan la biodiversidad local o las técnicas agrícolas actuales.
+
+Fricción de desgaste operativo (Paso 4): Ocurre en el momento del consumo de la información. Causa: La ausencia de una infraestructura interoperable obliga a realizar procesos manuales de extracción, transcripción a hojas de cálculo y cruce de variables. Afecta a: Profesionales y organizaciones de ayuda humanitaria, encareciendo y retrasando el diseño urgente de minutas, cálculos poblacionales o planes de compra en emergencias.
+
+Fricción en la resolución de controversias (Paso 5): Ocurre cuando un laboratorio independiente genera evidencia que contradice el dogma oficial. Causa: No existe un canal neutral ni un mecanismo de consenso para que la comunidad evalúe, vote y actualice el registro. Afecta a: Toda la comunidad científica, obligando a los investigadores a asumir valores teóricos y generando el riesgo de invalidar estudios clínicos enteros por basarse en datos sin trazabilidad consensuada.
 
 ### Oportunidad e hipótesis
 
 > Oportunidad priorizada entre las fricciones identificadas, con el motivo de la elección. Hipótesis inicial de por qué blockchain podría mejorar ese punto, expresada en términos de qué cambiaría para el usuario. Extensión: 150–300 palabras.
 
-La oportunidad priorizada consiste en mejorar la trazabilidad y verificabilidad del historial de datos nutricionales desde su generación inicial hasta su utilización final por consumidores e instituciones.
- 
-Esta oportunidad fue seleccionada porque representa el origen de varias de las fricciones identificadas. Cuando todos los actores pueden consultar un historial confiable y compartido, disminuyen los costos de auditoría, aumentan los niveles de confianza y resulta más sencillo detectar modificaciones o inconsistencias.
- 
-La hipótesis inicial es que una solución basada en blockchain permitiría registrar cada análisis nutricional, actualización o certificación en un historial compartido e inalterable accesible para todos los participantes autorizados.
- 
-Para el usuario final esto significaría poder verificar el origen de la información nutricional, conocer cuándo fue actualizada y validar quién realizó cada modificación. Como consecuencia, aumentaría la transparencia y la confianza en los datos utilizados para tomar decisiones relacionadas con salud y alimentación. Un nutricionista, por ejemplo, podría confirmar en segundos qué laboratorio certificó el dato que usa para diseñar una dieta.
+La oportunidad priorizada es resolver la fricción en la resolución de controversias y la obsolescencia del dato (Pasos 3 y 5).
+
+Elegimos esta oportunidad porque representa el cuello de botella estructural del sistema: si la información base carece de un historial auditable o está desactualizada, todos los esfuerzos posteriores (desde estudios clínicos hasta la planificación de minutas para emergencias humanitarias) heredan ese error. Al descentralizar la validación, eliminamos la dependencia de una única entidad estatal que congela los datos durante décadas.
+
+Hipótesis inicial:
+Creemos que implementar un registro distribuido gobernado por Contratos Inteligentes (Soroban) permitirá crear una capa de consenso científico neutral. En este sistema, cualquier actualización, homologación cultural o resolución de una discrepancia analítica quedará registrada en un historial inalterable.
+
+Para el Usuario (el profesional de nutrición o investigador), esto significaría dejar de confiar a ciegas en un PDF estático. Al consultar la composición de un alimento, el usuario vería el linaje exacto de la evidencia. El sistema le garantizaría que un dato nuevo o discrepante solo fue aprobado porque el contrato inteligente verificó la firma digital de un Quórum técnico (un grupo mínimo de profesionales acreditados). Como resultado, el nutricionista podría confirmar en segundos qué laboratorio generó el dato y con qué rigor metodológico, aumentando drásticamente la seguridad y agilidad al tomar decisiones críticas de salud pública o investigación clínica.
 
 ### Criterio de pertinencia
 
 > Justificación de por qué el caso requiere un registro distribuido y no una base de datos tradicional o una integración entre sistemas existentes. Debe apoyarse en al menos uno de los criterios de la Sesión 1: varias partes que no confían entre sí necesitan compartir un mismo registro, el histórico no puede alterarse, o se elimina un intermediario que hoy concentra la confianza. Extensión: 150–300 palabras.
 
-Este caso requiere un registro distribuido porque involucra múltiples organizaciones independientes que necesitan compartir información crítica sin depender completamente de una única entidad administradora.
- 
-Fabricantes, laboratorios, organismos reguladores e instituciones de salud poseen distintos intereses y responsabilidades. Cada uno necesita registrar información relevante y confiar en los datos suministrados por los demás actores. Una base de datos centralizada obligaría a depositar toda la confianza en una sola organización encargada de administrar el sistema.
- 
-Además, el historial de modificaciones constituye un elemento fundamental. Los análisis nutricionales pueden actualizarse como resultado de nuevas mediciones, cambios en formulaciones o revisiones regulatorias. Mantener evidencia verificable de cada cambio resulta esencial para auditorías y procesos de control.
- 
-La solución también se alinea con el criterio de histórico inalterable analizado durante la Sesión 1. Cualquier modificación debe conservar evidencia permanente de quién realizó el cambio, cuándo ocurrió y cuál era la información anterior.
- 
-Por estas razones, un registro distribuido ofrece ventajas significativas respecto de esquemas tradicionales basados únicamente en bases de datos aisladas o integraciones puntuales entre sistemas.
+Este caso exige un registro distribuido (blockchain) y no una base de datos centralizada porque cumple estrictamente con los criterios técnicos analizados en la Sesión 1:
+
+Múltiples partes sin confianza plena y eliminación del intermediario central: Laboratorios independientes, instituciones académicas y entidades gubernamentales tienen metodologías e intereses distintos. Una base de datos tradicional obliga a depositar toda la confianza en un único custodio estatal (ej. un ministerio o el ICBF), quien concentra el poder de decidir qué datos se publican y cuáles se descartan de forma unilateral. Un registro distribuido elimina este intermediario, permitiendo un ecosistema neutral donde la validez del dato depende del consenso de expertos.
+
+Histórico inalterable para la evidencia científica: La ciencia exige conservar el linaje exacto de la información. Si un laboratorio independiente refuta un dato oficial, ambas versiones deben coexistir. El registro inmutable garantiza que ninguna entidad pueda sobreescribir, maquillar u ocultar el historial de discrepancias metodológicas.
+
+Arquitectura pertinente:
+Siguiendo los principios de diseño de redes distribuidas, este proyecto no utilizará la blockchain como base de datos. Los extensos metadatos taxonómicos de los alimentos vivirán en una base de datos tradicional. La red blockchain se utilizará exclusivamente para registrar lo que las partes necesitan verificar: los hashes criptográficos de los reportes bromatológicos de laboratorio y las firmas digitales del Quórum de expertos que avalan la información.
 
 ### Supuestos y riesgos
 
 > Dos o tres supuestos que tendrían que ser ciertos para que la hipótesis funcione, y qué podría invalidarla. Extensión: 150–300 palabras.
 
-El primer supuesto es que los laboratorios, fabricantes y organismos reguladores estarán dispuestos a participar en una red compartida y registrar sus actividades de manera consistente. Si los actores clave no participan, la trazabilidad quedaría incompleta.
- 
-El segundo supuesto es que la información registrada inicialmente será confiable. Aunque la tecnología puede proteger la integridad del historial, no garantiza que los datos introducidos sean correctos desde el origen.
- 
-El tercer supuesto es que los beneficios obtenidos en auditoría, transparencia y confianza compensarán los costos de adopción e integración tecnológica.
- 
-Entre los principales riesgos se encuentran la resistencia organizacional al cambio, posibles restricciones regulatorias relacionadas con la gestión de información alimentaria y la dificultad de establecer estándares comunes para el intercambio de datos entre instituciones.
- 
-Asimismo, si los procedimientos de validación previos al registro no son adecuados, podrían preservarse permanentemente datos incorrectos, reduciendo el valor de la solución propuesta.
+Supuestos:
+
+Viabilidad de adopción inicial: Suponemos que es posible extraer y estructurar los datos fácticos de fuentes oficiales abiertas (como la TCAC o bases de la FAO) para inicializar la base de datos, sin requerir que los ministerios integren sus sistemas directamente desde el día uno.
+
+Incentivos de validación: Suponemos que las instituciones académicas, laboratorios independientes y profesionales estarán dispuestos a participar como validadores técnicos (Quórum) motivados por el rigor científico, el prestigio académico y la necesidad gremial de contar con una herramienta confiable para sus propios cálculos.
+
+Riesgos que podrían invalidar la hipótesis:
+
+El "Problema del Oráculo" (Basura entra, basura queda): La tecnología blockchain garantiza que el registro no se altere, pero no puede garantizar que el análisis de laboratorio original sea metodológicamente impecable. Si las reglas del Contrato Inteligente son débiles y el Quórum falla en su revisión, se preservarán permanentemente datos científicos incorrectos, destruyendo la confianza en el sistema.
+
+Riesgo legal por inmutabilidad de datos personales: Como rige el principio de que en redes públicas "nada se borra", existe el riesgo de violar normativas de privacidad (Habeas Data) si se exponen los datos de los profesionales que auditan la información. Para evitar que esto invalide el proyecto, el diseño debe garantizar que los datos personales residan en bases de datos tradicionales, enviando a la blockchain únicamente identificadores o firmas criptográficas seudonimizadas para verificar las autorías.
