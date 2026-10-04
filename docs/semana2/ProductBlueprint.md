@@ -4,7 +4,7 @@
 **Programa:** Blockchain Builders 101 – BAF, Ruta N Medellín y Stellar
 **Entrega:** Semana 2 – Domingo 4 de octubre
 **Repositorio:** [NutriTrust](https://github.com/Yuenfey/NutriTrust)
-**Tablero Kanban:** [Backlog Kanban NutriTrust](https://github.com/users/nicolasalvarino-l/projects/2)
+**Tablero Kanban:** [Backlog Kanban NutriTrust](https://github.com/users/nicolasalvarino-l/projects/3)
 
 ---
 
@@ -89,7 +89,7 @@ El recorte lo hicimos pensando en que el núcleo del problema es la falta de un 
 
 El backlog vive como tablero Kanban en GitHub Projects. Usamos cinco columnas: Backlog, Ready, In Progress, In review y Done. Cada tarjeta tiene su historia de usuario, criterios de aceptación en formato Dado / Cuando / Entonces, la etiqueta MoSCoW correspondiente y el responsable asignado.
 
-**Enlace al tablero:** https://github.com/users/nicolasalvarino-l/projects/2
+**Enlace al tablero:** https://github.com/users/nicolasalvarino-l/projects/3
 
 **Ejemplo de criterios de aceptación por tarjeta:**
 
@@ -110,6 +110,40 @@ Las demás tarjetas siguen el mismo formato y están disponibles en el tablero.
 
 La arquitectura de NutriTrust está organizada en cuatro capas que conectan la interfaz del usuario con la red Stellar.
 
+```mermaid
+flowchart LR
+    subgraph Usuarios
+        LAB[Laboratorio]
+        REG[Regulador / Nutricionista / Investigador]
+        CON[Consumidor - QR]
+    end
+    subgraph Frontend["Frontend (React / Next.js)"]
+        UI[Paneles y vista pública]
+    end
+    subgraph Backend["Backend (Node.js + TypeScript)"]
+        API[API REST: autenticación, validación, roles]
+        SDK[Stellar SDK: arma y envía transacciones]
+    end
+    subgraph OffChain["Almacenamiento off-chain"]
+        DB[(Base de datos / IPFS: datos completos y archivos)]
+    end
+    subgraph Stellar["Red Stellar (testnet)"]
+        SC[Contrato Soroban: registrar, vincular, consultar, roles]
+        RPC[Stellar RPC: lecturas y eventos]
+    end
+    LAB --> UI
+    REG --> UI
+    CON --> UI
+    UI -->|REST| API
+    API --> DB
+    API --> SDK
+    SDK -->|transacción firmada: hash + metadatos| SC
+    SC --> RPC
+    RPC -->|historial verificado| API
+```
+
+*Stellar entra en la flecha "transacción firmada".*
+
 **Frontend:** una aplicación web en React/Next.js. Tiene tres vistas principales: el panel del laboratorio para registrar análisis, el panel de consulta para reguladores, nutricionistas e investigadores, y la vista pública que se abre al escanear el código QR de un producto. La interfaz se comunica con el backend mediante una API REST.
 
 **Backend:** un servicio en Node.js con TypeScript. Se encarga de la autenticación, la validación de datos, el control de roles y permisos, y de armar las transacciones que van a Stellar. Es la capa que media entre el usuario y la red.
@@ -124,22 +158,16 @@ La arquitectura de NutriTrust está organizada en cuatro capas que conectan la i
 
 ## 8. Uso de Stellar y justificación
 
-Cada componente de Stellar cumple un papel específico en NutriTrust.
+Cada componente de Stellar cumple un papel concreto en NutriTrust:
 
-**Cuentas Stellar:** son la identidad de cada actor. Cada laboratorio, productor, regulador y consumidor tiene su par de claves. Esto permite que cada quien firme con su clave privada y nadie pueda hacerse pasar por otro.
+- **Cuentas Stellar:** son la identidad de cada actor. Laboratorios, productores y reguladores firman con su propia clave, así que nadie puede hacerse pasar por otro.
+- **Soroban:** aloja la lógica del negocio (registro de análisis, vinculación de etiquetas, historial y control de acceso) como reglas verificables que no dependen de un intermediario.
+- **Transacciones:** cada registro o modificación genera una transacción firmada con sello de tiempo en el ledger. Esa es la base de la trazabilidad.
+- **Stellar SDK (JavaScript/TypeScript) y Stellar RPC:** el SDK construye y envía las transacciones desde el backend; el RPC permite consultar el estado del contrato y sus eventos.
+- **Testnet:** permite construir y validar el MVP sin costo y deja evidencia verificable en la red.
 
-**Soroban:** aquí vive la lógica del negocio. El contrato maneja el registro de análisis, la vinculación de etiquetas, el historial y el control de acceso. Lo elegimos porque permite ejecutar reglas verificables sin necesidad de un intermediario.
+**Por qué Stellar.** El Problem Brief concluyó que el caso necesita un registro distribuido porque laboratorios, fabricantes y reguladores no confían plenamente entre sí y deben compartir un mismo registro. Además, el histórico no puede alterarse: cada análisis y cada corrección debe dejar evidencia permanente. Y se elimina el intermediario que hoy concentra la confianza, ya que ningún laboratorio ni plataforma central controla el dato.
 
-**Transacciones:** cada vez que se registra un análisis o se modifica un dato, se genera una transacción firmada que queda en el ledger con sello de tiempo. Esa es la base de la trazabilidad.
-
-**Testnet:** todo el desarrollo y las pruebas se hacen aquí. Nos permite construir y validar el MVP sin costos ni riesgos, y deja evidencia verificable en la red.
-
-**Stellar SDK para JavaScript/TypeScript:** es lo que nos permite construir, firmar y enviar transacciones desde el backend en Node.js sin tener que escribir todo desde cero.
-
-**Stellar RPC:** lo usamos para consultar el estado del contrato y los eventos desde la interfaz, en tiempo real.
-
-**Por qué Stellar y no otra red.** El Problem Brief dejó claro que este caso necesita un registro distribuido porque hay varias organizaciones independientes que necesitan compartir información crítica sin depender de una sola entidad. Stellar cumple con los tres criterios que vimos en la Sesión 1. Primero, hay varias partes que no confían plenamente entre sí (laboratorios, fabricantes, reguladores) y necesitan compartir un mismo registro. Segundo, el histórico no puede alterarse: cada análisis y cada modificación tiene que dejar evidencia permanente. Y tercero, se elimina un intermediario que hoy concentra la confianza, porque ya no dependemos de un laboratorio específico ni de una plataforma central.
-
-Además, Stellar tiene costos de transacción muy bajos, que es clave cuando se van a registrar miles de análisis; sus SDKs en JavaScript y TypeScript se acomodan al stack del equipo; Soroban nos da la lógica que necesitamos; y la testnet es gratuita, así que podemos validar todo sin invertir dinero. Su enfoque en trazabilidad y movimiento de valor encaja con el impacto social que buscamos: que la información nutricional verificable sea accesible para cualquier persona.
+Stellar encaja con esas necesidades por sus costos de transacción muy bajos, clave para registrar miles de análisis; por sus SDKs en JavaScript y TypeScript, que se ajustan al stack del equipo; y porque Soroban ofrece los contratos que necesitamos sin la complejidad ni los costos de otras redes. Así, la información nutricional verificable puede llegar a cualquier persona.
 
 ---
