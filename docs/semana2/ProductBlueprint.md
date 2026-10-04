@@ -10,20 +10,20 @@
 
 ## 1. Priorización de historias
 
-Revisamos entre todos las historias que cada uno escribió y nos dimos cuenta de que había varias que se repetían o que se solapaban entre roles. Después de agruparlas y quitar duplicados, nos quedamos con un conjunto que representa el flujo completo del producto: desde el laboratorio que registra el dato hasta el consumidor que lo verifica.
+Revisamos entre todos las historias propuestas por cada integrante del equipo y consolidamos aquellas que cubren el ciclo de vida del dato bromatológico: desde su emisión y validación científica, hasta su auditoría y consumo final.
 
-Para priorizar usamos dos cosas al mismo tiempo: una matriz sencilla de valor contra complejidad, y el marco MoSCoW que vimos en clase. La pregunta que nos hacíamos con cada historia era si sin esa funcionalidad el producto todavía resolvía el problema. Las que no pasaban ese filtro las dejamos clasificadas como deseables o fuera del MVP.
+**Criterio de priorización:** Marco MoSCoW (Imprescindible, Debería, Podría) ponderado con una matriz de valor clínico/regulatorio versus complejidad técnica. Evaluamos si el producto resuelve el dolor central de procedencia y trazabilidad sin cada función.
 
-Las historias que quedaron en el backlog son estas:
-
-1. Registrar los resultados del análisis nutricional con fecha y responsable (laboratorio) — Imprescindible
-2. Vincular la etiqueta del producto con el análisis certificado (productor) — Imprescindible
-3. Consultar el historial completo de análisis y modificaciones de un producto (regulador) — Imprescindible
-4. Asignar roles y permisos diferenciados por tipo de actor (administrador) — Imprescindible
-5. Confirmar qué laboratorio certificó un dato y en qué fecha (nutricionista) — Debería
-6. Acceder a la procedencia exacta y versiones anteriores de un dato (investigador) — Debería
-7. Verificar el origen y validez del dato antes de comprar (consumidor) — Podría
-8. Recibir notificación cuando un dato nutricional es actualizado (regulador) — Podría
+| Prioridad | Historia | Propuesta por | Por qué entra al backlog |
+| :---: | --- | :---: | --- |
+| 1 (Imprescindible) | Registrar los resultados del análisis nutricional con fecha, responsable y método analítico. | Nicolás Alvarino / Juliana Lugo | Es la condición habilitante del sistema para registrar el dato original con evidencia técnica. |
+| 2 (Imprescindible) | Aprobar o rechazar colegiadamente un análisis propuesto mediante quórum técnico. | Santiago Mesa / Yuen Alvarez | Materializa el consenso científico neutral, sustituyendo la dependencia en un custodio único. |
+| 3 (Imprescindible) | Vincular la etiqueta comercial del producto con el análisis certificado en laboratorio. | Nicolás Alvarino | Permite certificar la veracidad de la información declarada ante clientes y reguladores. |
+| 4 (Imprescindible) | Asignar y revocar roles y permisos diferenciados según acreditación institucional. | Santiago Mesa | Asegura la confiabilidad de la red garantizando que solo actores autorizados firmen registros. |
+| 5 (Imprescindible) | Consultar el historial completo y procedencia de modificaciones de un alimento. | Nicolás Alvarino / Yuen Alvarez | Resuelve la auditoría de linaje e impide que actualizaciones borren registros históricos. |
+| 6 (Debería) | Acceder a datos bromatológicos estandarizados mediante un canal unificado de consulta. | Juliana Lugo | Permite a sistemas clínicos e investigadores interoperar directamente con evidencia verificada. |
+| 7 (Debería) | Confirmar laboratorio certificador, fecha y parámetros de ensayo de un dato. | Yuen Alvarez / Juliana Lugo | Brinda certeza técnica inmediata para cálculos nutricionales y prescripciones terapéuticas. |
+| 8 (Podría) | Verificar el origen y validez del dato escaneando el empaque del producto. | Nicolás Alvarino / Santiago Mesa | Aporta transparencia directa al consumidor final, condicionada a la vinculación de etiquetas. |
 
 Todo esto vive en el tablero de GitHub Projects del equipo, con cada historia como una tarjeta con sus criterios de aceptación.
 
@@ -108,7 +108,7 @@ Las demás tarjetas siguen el mismo formato y están disponibles en el tablero.
 
 ## 7. Arquitectura inicial
 
-La arquitectura de NutriTrust está organizada en cuatro capas que conectan la interfaz del usuario con la red Stellar.
+La arquitectura de NutriTrust se organiza en cuatro capas que articulan la interfaz con la red Stellar:
 
 ```mermaid
 flowchart LR
@@ -142,17 +142,15 @@ flowchart LR
     RPC -->|historial verificado| API
 ```
 
-*Stellar entra en la flecha "transacción firmada".*
+| Capa | Componente | Qué hace |
+| :---: | --- | --- |
+| **Interfaz** | React / Next.js | Paneles de laboratorio, vista de auditoría para profesionales y consulta pública vía código QR. |
+| **Lógica** | Node.js + TypeScript | Autenticación, control de roles, persistencia off-chain y construcción de transacciones con Stellar SDK. |
+| **Almacenamiento** | Base de datos / IPFS | Almacena reportes completos y archivos bromatológicos para optimizar costos de red. |
+| **Stellar** | Soroban (Rust) en Testnet | Contrato inteligente que valida firmas, graba hashes inmutables y ejecuta el consenso técnico. |
 
-**Frontend:** una aplicación web en React/Next.js. Tiene tres vistas principales: el panel del laboratorio para registrar análisis, el panel de consulta para reguladores, nutricionistas e investigadores, y la vista pública que se abre al escanear el código QR de un producto. La interfaz se comunica con el backend mediante una API REST.
-
-**Backend:** un servicio en Node.js con TypeScript. Se encarga de la autenticación, la validación de datos, el control de roles y permisos, y de armar las transacciones que van a Stellar. Es la capa que media entre el usuario y la red.
-
-**Contrato inteligente en Soroban:** un contrato en Rust desplegado en la testnet de Stellar con cuatro funciones principales: registrar un análisis, vincular una etiqueta, consultar el historial y asignar roles. Guarda hashes y metadatos, no los datos completos, para reducir costos y proteger la privacidad.
-
-**Red Stellar:** cada actor tiene su cuenta con su par de claves. Las transacciones se firman con la clave del laboratorio o del productor. Los datos completos (resultados numéricos, archivos) se guardan fuera de la cadena, en IPFS o en una base de datos, y solo el hash va a la red.
-
-**El punto exacto donde entra Stellar:** cuando el backend envía la transacción firmada al contrato Soroban. El contrato valida la firma, verifica los permisos según el rol del actor y graba el registro. Cualquier actor autorizado puede consultar el historial llamando a las funciones de lectura del contrato a través de Stellar RPC. La interfaz nunca habla directamente con la red; siempre pasa por el backend, que actúa como capa de seguridad y abstracción.
+**En qué punto entra la red:**
+Stellar entra en acción cuando el backend envía la transacción firmada (hash criptográfico del análisis y metadatos) al contrato Soroban. El contrato valida la firma del actor acreditado, aplica las reglas de acceso y graba el registro inmutable en el ledger. Luego, cualquier usuario o entidad audita el historial consultando el contrato mediante Stellar RPC. La interfaz nunca interactúa directamente con la red sin pasar por el backend.
 
 ---
 
