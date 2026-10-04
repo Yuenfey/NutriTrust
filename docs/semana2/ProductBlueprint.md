@@ -4,7 +4,7 @@
 **Programa:** Blockchain Builders 101 – BAF, Ruta N Medellín y Stellar
 **Entrega:** Semana 2 – Domingo 4 de octubre
 **Repositorio:** [NutriTrust](https://github.com/Yuenfey/NutriTrust)
-**Tablero Kanban:** [Backlog Kanban NutriTrust](https://github.com/users/nicolasalvarino-l/projects/3)
+**Tablero Kanban:** [Backlog Kanban NutriTrust](https://github.com/users/Julilugo09/projects/1)
 
 ---
 
@@ -98,7 +98,7 @@ El lienzo de una página cubre los nueve bloques del modelo de producto de Nutri
 
 El backlog vive como tablero Kanban en GitHub Projects. Usamos cinco columnas: Backlog, Ready, In Progress, In review y Done. Cada tarjeta tiene su historia de usuario, criterios de aceptación en formato Dado / Cuando / Entonces, la etiqueta MoSCoW correspondiente y el responsable asignado.
 
-**Enlace al tablero:** https://github.com/users/nicolasalvarino-l/projects/3
+**Enlace al tablero:** https://github.com/users/Julilugo09/projects/1
 
 **Ejemplo de criterios de aceptación por tarjeta:**
 
