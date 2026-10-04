@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120" font-family="Helvetica, Arial, sans-serif">
+<rect width="1800" height="1120" fill="#FFFFFF"/>
+<text x="24" y="52" font-size="34" font-weight="700" fill="#111">Lean Canvas · NutriTrust</text>
+<text x="24" y="86" font-size="18" fill="#555">Borrador · Blockchain Builders 101 · Semana 2</text>
+<rect x="6" y="116" width="348" height="748" rx="10" fill="#F8F9FA" stroke="#CED4DA" stroke-width="2"/>
+<text x="22" y="150" font-size="17" font-weight="700" fill="#D9480F">1 · PROBLEMA</text>
+<text x="22" y="182" font-size="16" fill="#212529">• Los datos nutricionales están</text>
+<text x="22" y="204" font-size="16" fill="#212529">dispersos en etiquetas, tablas</text>
+<text x="22" y="226" font-size="16" fill="#212529">oficiales y PDFs de laboratorio, sin</text>
+<text x="22" y="248" font-size="16" fill="#212529">forma de verificar su origen.</text>
+<text x="22" y="276" font-size="16" fill="#212529">• Al actualizarse las tablas</text>
+<text x="22" y="298" font-size="16" fill="#212529">oficiales (TCAC) se excluyen</text>
+<text x="22" y="320" font-size="16" fill="#212529">alimentos y se rompe el historial.</text>
+<text x="22" y="348" font-size="16" fill="#212529">• Las correcciones y cambios de</text>
+<text x="22" y="370" font-size="16" fill="#212529">formulación no dejan un rastro</text>
+<text x="22" y="392" font-size="16" fill="#212529">auditable.</text>
+<text x="22" y="430" font-size="16" fill="#212529" font-weight="700">Alternativas actuales:</text>
+<text x="22" y="458" font-size="16" fill="#212529">Hojas de cálculo, PDFs</text>
+<text x="22" y="480" font-size="16" fill="#212529">institucionales, valores teóricos</text>
+<text x="22" y="502" font-size="16" fill="#212529">asumidos y auditorías manuales.</text>
+<rect x="366" y="116" width="348" height="368" rx="10" fill="#F8F9FA" stroke="#CED4DA" stroke-width="2"/>
+<text x="382" y="150" font-size="17" font-weight="700" fill="#343A40">4 · SOLUCIÓN</text>
+<text x="382" y="182" font-size="16" fill="#212529">• Registro de análisis firmado por</text>
+<text x="382" y="204" font-size="16" fill="#212529">laboratorios acreditados.</text>
+<text x="382" y="232" font-size="16" fill="#212529">• Validación por quórum de expertos</text>
+<text x="382" y="254" font-size="16" fill="#212529">antes de oficializar un dato.</text>
+<text x="382" y="282" font-size="16" fill="#212529">• Historial versionado y consulta</text>
+<text x="382" y="304" font-size="16" fill="#212529">pública del origen del dato.</text>
+<rect x="366" y="496" width="348" height="368" rx="10" fill="#F8F9FA" stroke="#CED4DA" stroke-width="2"/>
+<text x="382" y="530" font-size="17" font-weight="700" fill="#343A40">8 · MÉTRICAS CLAVE</text>
+<text x="382" y="562" font-size="16" fill="#212529">• Datos validados por mes.</text>
+<text x="382" y="590" font-size="16" fill="#212529">• Expertos y laboratorios activos en</text>
+<text x="382" y="612" font-size="16" fill="#212529">el quórum.</text>
+<text x="382" y="640" font-size="16" fill="#212529">• Tiempo para verificar un dato (de</text>
+<text x="382" y="662" font-size="16" fill="#212529">días a minutos).</text>
+<text x="382" y="690" font-size="16" fill="#212529">• Consultas de verificación por mes.</text>
+<rect x="726" y="116" width="348" height="748" rx="10" fill="#F8F9FA" stroke="#CED4DA" stroke-width="2"/>
+<text x="742" y="150" font-size="17" font-weight="700" fill="#7D00FF">3 · PROPUESTA DE VALOR ÚNICA</text>
+<text x="742" y="182" font-size="22" fill="#212529">El dato nutricional que</text>
+<text x="742" y="212" font-size="22" fill="#212529">cualquiera puede</text>
+<text x="742" y="242" font-size="22" fill="#212529">verificar: quién lo midió,</text>
+<text x="742" y="272" font-size="22" fill="#212529">quién lo validó y cómo</text>
+<text x="742" y="302" font-size="22" fill="#212529">cambió.</text>
+<text x="742" y="348" font-size="22" fill="#212529" font-weight="700">Concepto de alto nivel:</text>
+<text x="742" y="384" font-size="22" fill="#212529">Una &quot;historia clínica&quot;</text>
+<text x="742" y="414" font-size="22" fill="#212529">para cada alimento.</text>
+<rect x="1086" y="116" width="348" height="368" rx="10" fill="#F8F9FA" stroke="#CED4DA" stroke-width="2"/>
+<text x="1102" y="150" font-size="17" font-weight="700" fill="#343A40">9 · VENTAJA ESPECIAL</text>
+<text x="1102" y="182" font-size="16" fill="#212529">• La red de laboratorios y expertos</text>
+<text x="1102" y="204" font-size="16" fill="#212529">validadores, y el historial</text>
+<text x="1102" y="226" font-size="16" fill="#212529">acumulado: la tecnología se copia,</text>
+<text x="1102" y="248" font-size="16" fill="#212529">la red y el historial no.</text>
+<text x="1102" y="276" font-size="16" fill="#212529">• Equipo que une nutrición clínica e</text>
+<text x="1102" y="298" font-size="16" fill="#212529">ingeniería.</text>
+<rect x="1086" y="496" width="348" height="368" rx="10" fill="#F8F9FA" stroke="#CED4DA" stroke-width="2"/>
+<text x="1102" y="530" font-size="17" font-weight="700" fill="#343A40">5 · CANALES</text>
+<text x="1102" y="562" font-size="16" fill="#212529">• Colegios y asociaciones de</text>
+<text x="1102" y="584" font-size="16" fill="#212529">nutricionistas.</text>
+<text x="1102" y="612" font-size="16" fill="#212529">• Redes de investigación y</text>
+<text x="1102" y="634" font-size="16" fill="#212529">universidades.</text>
+<text x="1102" y="662" font-size="16" fill="#212529">• Laboratorios bromatológicos</text>
+<text x="1102" y="684" font-size="16" fill="#212529">acreditados.</text>
+<text x="1102" y="712" font-size="16" fill="#212529">• Organizaciones de ayuda</text>
+<text x="1102" y="734" font-size="16" fill="#212529">humanitaria.</text>
+<text x="1102" y="762" font-size="16" fill="#212529">• Código QR en empaques (fase</text>
+<text x="1102" y="784" font-size="16" fill="#212529">posterior).</text>
+<rect x="1446" y="116" width="348" height="748" rx="10" fill="#F8F9FA" stroke="#CED4DA" stroke-width="2"/>
+<text x="1462" y="150" font-size="17" font-weight="700" fill="#1971C2">2 · SEGMENTOS DE CLIENTES</text>
+<text x="1462" y="182" font-size="16" fill="#212529" font-weight="700">Usuarios del MVP:</text>
+<text x="1462" y="210" font-size="16" fill="#212529">Nutricionistas clínicos,</text>
+<text x="1462" y="232" font-size="16" fill="#212529">investigadores y planificadores de</text>
+<text x="1462" y="254" font-size="16" fill="#212529">servicios de alimentación.</text>
+<text x="1462" y="292" font-size="16" fill="#212529" font-weight="700">Actores que alimentan la red:</text>
+<text x="1462" y="320" font-size="16" fill="#212529">Laboratorios, colegios de</text>
+<text x="1462" y="342" font-size="16" fill="#212529">nutricionistas y reguladores</text>
+<text x="1462" y="364" font-size="16" fill="#212529">(INVIMA).</text>
+<text x="1462" y="402" font-size="16" fill="#212529" font-weight="700">Adoptantes tempranos:</text>
+<text x="1462" y="430" font-size="16" fill="#212529">Investigadores y nutricionistas que</text>
+<text x="1462" y="452" font-size="16" fill="#212529">hoy calculan a mano y necesitan</text>
+<text x="1462" y="474" font-size="16" fill="#212529">citar la fuente del dato.</text>
+<rect x="6" y="876" width="888" height="222" rx="10" fill="#F8F9FA" stroke="#CED4DA" stroke-width="2"/>
+<text x="22" y="910" font-size="17" font-weight="700" fill="#343A40">7 · ESTRUCTURA DE COSTOS</text>
+<text x="22" y="942" font-size="16" fill="#212529">• Desarrollo de contratos Soroban y de la plataforma web.</text>
+<text x="22" y="970" font-size="16" fill="#212529">• Tarifas de la red Stellar (fracciones de centavo por transacción).</text>
+<text x="22" y="998" font-size="16" fill="#212529">• Almacenamiento off-chain de datos completos y archivos.</text>
+<text x="22" y="1026" font-size="16" fill="#212529">• Auditoría de seguridad y cumplimiento de Habeas Data.</text>
+<text x="22" y="1054" font-size="16" fill="#212529">• Acompañamiento a laboratorios para sumarse a la red.</text>
+<rect x="906" y="876" width="888" height="222" rx="10" fill="#F8F9FA" stroke="#CED4DA" stroke-width="2"/>
+<text x="922" y="910" font-size="17" font-weight="700" fill="#343A40">6 · FLUJO DE INGRESOS</text>
+<text x="922" y="942" font-size="16" fill="#212529">• Fase 1: acceso gratuito para profesionales y ayuda humanitaria, financiado con convocatorias del</text>
+<text x="922" y="964" font-size="16" fill="#212529">ecosistema Stellar.</text>
+<text x="922" y="992" font-size="16" fill="#212529">• Fase 2: suscripción para laboratorios y fabricantes que certifican datos; API de pago para food</text>
+<text x="922" y="1014" font-size="16" fill="#212529">service.</text>
+<text x="922" y="1042" font-size="16" fill="#212529">• Fase 3: licencias institucionales para reguladores y universidades.</text>
+</svg>

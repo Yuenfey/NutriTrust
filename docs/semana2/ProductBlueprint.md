@@ -71,17 +71,11 @@ El recorte lo hicimos pensando en que el núcleo del problema es la falta de un 
 
 ## 5. Lean Canvas
 
-| Bloque | Contenido |
-|---|---|
-| **Problema** | Datos nutricionales fragmentados, no verificables y difíciles de auditar. Cada actor guarda sus registros por separado. Auditorías lentas y costosas. |
-| **Segmento de clientes** | Laboratorios de análisis, fabricantes de alimentos, organismos reguladores como el INVIMA, nutricionistas, investigadores y consumidores con restricciones alimentarias. |
-| **Propuesta de valor única** | Trazabilidad verificable de la información nutricional, accesible a todos los actores sin depender de una entidad central. |
-| **Solución** | Plataforma sobre Stellar que registra cada análisis en un historial compartido e inalterable, con roles diferenciados y consulta pública. |
-| **Canales** | Integración por API con laboratorios, portal web para reguladores, panel de consulta para nutricionistas e investigadores, código QR en empaques para consumidores. |
-| **Métricas clave** | Análisis registrados por mes, tiempo promedio de auditoría (que esperamos bajar de días a minutos), actores activos por rol, porcentaje de productos con trazabilidad completa, verificaciones mensuales. |
-| **Ventaja diferencial** | El historial inalterable más la red de actores que se va construyendo. La tecnología se puede copiar, la red de laboratorios, reguladores y fabricantes conectados no. |
-| **Estructura de costos** | Desarrollo y mantenimiento de la plataforma, infraestructura de nodos Stellar, soporte técnico, cumplimiento regulatorio y difusión B2B. |
-| **Flujo de ingresos** | Suscripción mensual para laboratorios y fabricantes, licencia anual para organismos reguladores, API premium para integraciones y certificaciones verificables con sello NutriTrust. |
+**Enlace al Lean Canvas:** [Lean Canvas de NutriTrust](LeanCanvas.md)
+
+[![Lean Canvas de NutriTrust](img/LeanCanvas.svg)](LeanCanvas.md)
+
+El lienzo cubre problema, segmento de usuarios, propuesta de valor única, solución, canales, métricas clave, ventaja diferencial y estructura de costos e ingresos. En el enlace está también la versión en texto.
 
 ---
 
