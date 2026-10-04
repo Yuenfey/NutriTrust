@@ -71,17 +71,26 @@ El recorte lo hicimos pensando en que el núcleo del problema es la falta de un 
 
 ## 5. Lean Canvas
 
+**Enlace al Lean Canvas (obligatorio):** [Lean Canvas de NutriTrust](LeanCanvas.md)
+
+[![Lean Canvas de NutriTrust](img/LeanCanvas.svg)](LeanCanvas.md)
+
+El lienzo de una página cubre los nueve bloques del modelo de producto de NutriTrust:
+
 | Bloque | Contenido |
 |---|---|
-| **Problema** | Datos nutricionales fragmentados, no verificables y difíciles de auditar. Cada actor guarda sus registros por separado. Auditorías lentas y costosas. |
-| **Segmento de clientes** | Laboratorios de análisis, fabricantes de alimentos, organismos reguladores como el INVIMA, nutricionistas, investigadores y consumidores con restricciones alimentarias. |
-| **Propuesta de valor única** | Trazabilidad verificable de la información nutricional, accesible a todos los actores sin depender de una entidad central. |
-| **Solución** | Plataforma sobre Stellar que registra cada análisis en un historial compartido e inalterable, con roles diferenciados y consulta pública. |
-| **Canales** | Integración por API con laboratorios, portal web para reguladores, panel de consulta para nutricionistas e investigadores, código QR en empaques para consumidores. |
-| **Métricas clave** | Análisis registrados por mes, tiempo promedio de auditoría (que esperamos bajar de días a minutos), actores activos por rol, porcentaje de productos con trazabilidad completa, verificaciones mensuales. |
-| **Ventaja diferencial** | El historial inalterable más la red de actores que se va construyendo. La tecnología se puede copiar, la red de laboratorios, reguladores y fabricantes conectados no. |
-| **Estructura de costos** | Desarrollo y mantenimiento de la plataforma, infraestructura de nodos Stellar, soporte técnico, cumplimiento regulatorio y difusión B2B. |
-| **Flujo de ingresos** | Suscripción mensual para laboratorios y fabricantes, licencia anual para organismos reguladores, API premium para integraciones y certificaciones verificables con sello NutriTrust. |
+| **1. Problema** | Datos nutricionales fragmentados e inauditables; exclusión de alimentos al actualizar tablas oficiales (TCAC) con pérdida de historial; riesgo de litigios y sanciones por rotulado inexacto (Res. 810/2021). |
+| **Alternativas actuales** | Hojas de cálculo aisladas, PDFs institucionales estáticos, asunción empírica de valores teóricos y bases extranjeras descontextualizadas (USDA/INFOODS). |
+| **2. Segmentos de clientes** | **Usuarios del MVP:** Nutricionistas clínicos, investigadores y planificadores de compras públicas (PAE, ayuda humanitaria).<br>**Clientes B2B:** Laboratorios bromatológicos privados y empresas productoras de alimentos.<br>**Actores de red:** Colegios profesionales (ACODIN) y entidades reguladoras (INVIMA). |
+| **Adoptantes tempranos** | Investigadores clínicos y nutricionistas institucionales que pierden horas calculando a mano y necesitan auditar la procedencia técnica del dato. |
+| **3. Propuesta de valor única** | Infraestructura descentralizada que convierte el dato nutricional en evidencia científica auditable y consensuada en segundos, garantizando trazabilidad inalterable y neutralidad institucional. |
+| **Concepto de alto nivel** | Una "historia clínica" para cada alimento. |
+| **4. Solución** | Registro inmutable firmado por laboratorios acreditados, validación colegiada por quórum técnico de expertos antes de oficializar un dato, e historial versionado con API unificada. |
+| **5. Canales** | Alianzas con colegios profesionales (ACODIN), mesas técnicas de alimentación institucional, redes de investigación, integración por API con laboratorios y código QR en empaques comerciales. |
+| **6. Flujo de ingresos** | **Fase 1:** Convocatorias de innovación de Stellar (SCF); **Fase 2:** Micro-tarifas por certificación on-chain de lotes, suscripción SaaS para laboratorios y API premium para food service; **Fase 3:** Licenciamiento para reguladores y salud pública. |
+| **7. Estructura de costos** | Desarrollo de contratos Soroban y plataforma web; infraestructura RPC y tarifas mínimas de Stellar; almacenamiento híbrido off-chain (IPFS/BD); auditorías de seguridad (Habeas Data) e incentivos del quórum validador. |
+| **8. Métricas clave** | Perfiles bromatológicos validados por mes; expertos activos en quórum; tiempo promedio de verificación (de días a segundos); volumen de peticiones API y sellos digitales emitidos. |
+| **9. Ventaja diferencial** | Efecto de red de datos (*Data Network Effect*): a mayor volumen de análisis certificados, mayor valor y barrera de entrada. Historial inmutable acumulado no replicable retroactivamente y equipo interdisciplinario en nutrición clínica e ingeniería. |
 
 ---
 
